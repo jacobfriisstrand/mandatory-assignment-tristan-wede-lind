@@ -1,0 +1,56 @@
+.tour-dates {
+  display: grid;
+  margin-top: var(--spacing-16);
+  margin-bottom: var(--spacing-64);
+}
+
+picture {
+  margin-top: var(--spacing-16);
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 2;
+    object-fit: cover;
+  }
+}
+
+.event {
+  padding-block: var(--spacing-16);
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid var(--yellow);
+  }
+
+  article {
+    display: grid;
+    gap: var(--spacing-4);
+
+    div {
+      display: flex;
+      gap: var(--spacing-8);
+      align-items: last baseline;
+    }
+
+    .event-name {
+      color: var(--dark-blue);
+      font-weight: var(--fw-bold);
+    }
+
+    .event-role {
+      color: var(--red);
+      font-weight: var(--fw-medium);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .event {
+    border: 1px solid var(--yellow);
+    padding-inline: var(--spacing-16);
+    border-radius: var(--br-4);
+  }
+
+  .tour-dates {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-16);
+  }
+}

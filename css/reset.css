@@ -40,7 +40,7 @@ h6,
 button,
 input,
 label {
-  line-height: 1.1;
+  line-height: 1;
 }
 /* Makes images responsive */
 img,
@@ -59,12 +59,6 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
-}
-p,
-blockquote {
-  /* Sets the paragraph max-width to a readable length  */
-  max-width: 65ch; /* Makes the text-wrap more aligned */
-  text-wrap: pretty;
 }
 
 a {

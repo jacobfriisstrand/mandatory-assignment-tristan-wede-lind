@@ -1,0 +1,98 @@
+@import "./reset.css";
+
+:root {
+  /* --------- fonts --------- */
+  --body-font: system-ui, sans-serif;
+  --display-font: Rockwell, "Rockwell Nova", "Roboto Slab", "DejaVu Serif", "Sitka Small", serif;
+
+  /* --------- font-sizes --------- */
+  --fs-xxl: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+  --fs-xl: clamp(1.75rem, 1.662rem + 0.3756vw, 2rem);
+  --fs-l: clamp(1.5rem, 1.412rem + 0.3756vw, 1.75rem);
+  --fs-sm: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+  --fs-base: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+  --fs-xs: 1rem;
+
+  --fs-static: 1.2rem;
+
+  /* --------- font-weights --------- */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* --------- line-heights --------- */
+  --lh-1: 1;
+  --lh-125: 1.25;
+  --lh-15: 1.5;
+
+  /* --------- colors --------- */
+
+  /* base */
+  --light: #fffaf0;
+  --dark: hsl(0, 0%, 0%);
+  --grey: hsl(0, 0%, 94%);
+  --link: hsl(242, 100%, 47%);
+
+  /* brand */
+  --dark-blue: hsl(238, 40%, 25%);
+  --light-blue: hsl(219, 24%, 41%);
+  --yellow: hsl(47, 51%, 67%);
+  --red: hsl(359, 40%, 25%);
+
+  /* --------- spacing --------- */
+
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-12: 0.75rem;
+  --spacing-16: 1rem;
+  --spacing-24: 1.5rem;
+  --spacing-32: 2rem;
+  --spacing-64: 4rem;
+
+  --page-padding: 1rem;
+
+  /* --------- border-radius --------- */
+  --br-4: 0.25rem;
+  --br-8: 0.5rem;
+  --br-full: 9999px;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--body-font);
+  background-color: #fff;
+  color: var(--dark);
+  font-size: var(--fs-base);
+  font-weight: var(--regular);
+}
+
+body > * > * {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: var(--spacing-16);
+}
+
+body {
+  background-color: var(--light);
+}
+
+.section-header {
+  margin-inline: calc(-1 * var(--spacing-16));
+  width: calc(100% + (2 * var(--spacing-16)));
+  background-color: var(--light-blue);
+  color: var(--yellow);
+  padding-block: var(--spacing-16);
+
+  h2 {
+    padding-inline: var(--page-padding);
+    font-family: var(--display-font);
+    font-size: var(--fs-xl);
+  }
+}
+
+.arrow {
+  position: fixed;
+  bottom: var(--spacing-32);
+  right: var(--spacing-32);
+  background-color: transparent;
+}
